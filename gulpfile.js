@@ -134,3 +134,10 @@ gulp.series(
 server,
 watcher
 ));
+
+// Deploy
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
