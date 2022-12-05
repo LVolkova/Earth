@@ -1,0 +1,56 @@
+.logo {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 300px);
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto minmax(300px, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.logo:not(.logo--disable) {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__name {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: calc(0.3rem + 1.23vw);
+  line-height: calc(0.6rem + 1.4vw);
+  font-weight: 500;
+  color: @text-dark;
+  text-transform: uppercase;
+  min-width: 166px;
+  margin: 0 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0 0 0 15px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    min-width: inherit;
+    width: min-content;
+  }
+}
+
+.logo__name--no-wrap {
+  margin: 0;
+  white-space: nowrap;
+}

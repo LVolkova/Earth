@@ -1,0 +1,56 @@
+.up-button {
+  position: fixed;
+  display: none;
+  z-index: 1;
+  left: 30px;
+  bottom: 40px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(84, 115, 175, 0.3);
+  background-color: @background;
+  opacity: 0.7;
+  box-shadow: 0 0 4px rgba(84, 115, 175, 0.3);
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: auto;
+    right: 5%;
+    bottom: 50px;
+    width: 55px;
+    height: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 75px;
+    width: 60px;
+    height: 60px;
+    background-size: 30px 30px;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+}
+
+.up-button--shown {
+  display: inline-block;
+}
+
+.up-button__img {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50% + 2px) translateY(calc(-50% - 2px));
+
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 18px;
+    transform: translateX(50% + 9px) translateY(calc(-50%));
+  }
+}

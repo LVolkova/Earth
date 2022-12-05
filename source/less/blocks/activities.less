@@ -1,0 +1,23 @@
+.activities__item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.activities__item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.activities__item::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: url("../img/check-mark-gray.svg") no-repeat;
+  background-size: 15px 12px;
+  width: 19px;
+  height: 15px;
+}

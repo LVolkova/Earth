@@ -1,0 +1,11 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background-color: @background;
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid rgba(171, 171, 173, 0.43);
+    box-shadow: 0 1px 4px rgba(171, 171, 173, 0.5);
+  }
+}

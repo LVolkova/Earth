@@ -1,0 +1,126 @@
+.documents {
+  padding: 25px 20px;
+  border-radius: 20px;
+  background-color: @card;
+}
+
+.documents:not(:last-child) {
+  margin-bottom: 30px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.documents:last-child {
+  margin-bottom: 40px;
+}
+
+.documents__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.documents__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 13px;
+  background-color: @doc-block;
+
+  &:hover,
+  &:focus {
+    background-color: @doc-block-hover;
+    color: @text-doc-hover;
+  }
+
+  &:active {
+    color: rgba(62, 93, 153, 0.8);
+  }
+}
+
+.documents__item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.documents__text {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 10px 32px 10px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  color: @text;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 32px 10px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 15px 32px 15px 15px;
+  }
+}
+
+.documents__button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.documents__button-img {
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+
+.documents__button:hover path,
+.documents__button:focus path {
+  stroke: @text-doc-hover;
+}
+
+.documents__button:active path {
+  opacity: 0.8;
+}
+
+/* test */
+
+.test--opened {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.test--closed {
+  display: none;
+}
+
+.documents__item--red {
+  background-color: #ff0000;
+}

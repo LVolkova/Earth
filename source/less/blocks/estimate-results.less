@@ -1,0 +1,39 @@
+.estimate-results__text {
+  margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.estimate-results__list {
+  margin-bottom: 30px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.estimate-results__item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+  }
+}
+
+.estimate-results__item::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 0;
+  width: 17px;
+  height: 15px;
+  background-image: url("../../img/check-mark-blue.svg");
+}

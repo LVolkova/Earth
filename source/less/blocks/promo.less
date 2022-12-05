@@ -1,0 +1,130 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 245px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 380px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 460px;
+  }
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 245px;
+  width: 70vw;
+  background-color: @button;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  background-image: url("../img/promo-pattern.svg");
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    min-height: 380px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 460px;
+  }
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 224px;
+  width: 70vw;
+  background-color: @promo;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
+  @media (min-width: @tablet-width) {
+    min-height: 350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 430px;
+  }
+}
+
+.promo__container {
+  min-height: 224px;
+  max-width: 400px;
+  margin: 0 6.25%;
+  background-image: url("../img/promo-mobile.jpg"), linear-gradient(to right, rgb(220, 228, 242) 80%, rgba(220, 228, 242, 0) 80%);
+  background-size: auto 224px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 0;
+  box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+  box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.2);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-mobile@2x.jpg"), linear-gradient(to right, rgb(220, 228, 242) 50%, rgba(220, 228, 242, 0) 50%);
+    background-size: auto 224px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 350px;
+    max-width: none;
+    width: 668px;
+    margin: 0 auto;
+    background-image: url("../img/promo-tablet.jpg"), linear-gradient(to right, rgb(220, 228, 242) 50%, rgba(220, 228, 242, 0) 50%);
+    background-size: auto 350px;
+    padding: 50px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet@2x.jpg"), linear-gradient(to right, rgb(220, 228, 242) 50%, rgba(220, 228, 242, 0) 50%);
+      background-size: auto 350px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 430px;
+    background-image: url("../img/promo-desktop.jpg"), linear-gradient(to right, rgb(220, 228, 242) 50%, rgba(220, 228, 242, 0) 50%);
+    background-size: auto 450px;
+    padding: 60px 0;
+    width: 1050px;
+    margin: 0 auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-desktop@2x.jpg"), linear-gradient(to right, rgb(220, 228, 242) 50%, rgba(220, 228, 242, 0) 50%);
+      background-size: auto 450px;
+    }
+  }
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  color: @text-dark;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,30 @@
+.button {
+  background-color: @button;
+  border: none;
+  border-radius: 3px;
+  padding: 9px 18px;
+  font-size: 10px;
+  line-height: 8px;
+  font-weight: 600;
+  color: @text-light;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: min-content;
+  align-self: flex-start;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 41px;
+    border-radius: 5px;
+  }
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.9;
+}
+
+.button:active {
+  opacity: 0.7;
+}
