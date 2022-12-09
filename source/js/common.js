@@ -2,6 +2,7 @@
 
 let mainNav = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-nav__toggle');
+let windowWidth = window.innerWidth;
 
 mainNav.classList.remove('main-nav--nojs');
 
@@ -50,18 +51,20 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
-subNav.addEventListener('mouseover', showSubNav);
-subNav.addEventListener('mouseout', hideSubNav);
+if (window.innerWidth >= 1200) {
+  subNav.addEventListener('mouseover', showSubNav);
+  subNav.addEventListener('mouseout', hideSubNav);
 
-function showSubNav() {
-  subNav.classList.remove('submenu--closed');
-  subNav.classList.add('submenu--opened');
-};
+  function showSubNav() {
+    subNav.classList.remove('submenu--closed');
+    subNav.classList.add('submenu--opened');
+  };
 
-function hideSubNav() {
-  subNav.classList.add('submenu--closed');
-  subNav.classList.remove('submenu--opened');
-};
+  function hideSubNav() {
+    subNav.classList.add('submenu--closed');
+    subNav.classList.remove('submenu--opened');
+  };
+}
 
 /* Up scroll */
 
