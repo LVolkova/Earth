@@ -110,6 +110,7 @@ gulp.watch('source/*.html', gulp.series(html, reload));
 export const build = gulp.series(
 clean,
 copy,
+copyImages,
 gulp.parallel(
 styles,
 html,
@@ -134,10 +135,3 @@ gulp.series(
 server,
 watcher
 ));
-
-// Deploy
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
