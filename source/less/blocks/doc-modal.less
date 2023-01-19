@@ -34,7 +34,7 @@
 .doc-modal__window {
   display: flex;
   flex-direction: column;
-  margin: 30vh 0;
+  margin: 20vh 0;
   flex-shrink: 0;
   background: #ffffff;
   min-width: 280px;
@@ -42,8 +42,9 @@
   overflow: visible;
 
   @media (min-width: @tablet-width) {
+    margin: 25vh 0;
     min-width: 400px;
-    max-width: 45%;
+    max-width: 65%;
   }
 
   @media (min-width: @desktop-width) {
@@ -51,11 +52,11 @@
   }
 }
 
-
 .doc-modal__toggle {
   position: relative;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &::before,
   &::after {
